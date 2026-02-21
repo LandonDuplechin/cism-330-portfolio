@@ -1,11 +1,12 @@
 /*
 Name: Landon Duplechin
-Date: 02/13/2026
+Date: 02/20/2026
 File Name: styles.css
 */
 
 /* CSS Reset: removes default spacing and borders so styling is consistent across browsers */
-body, header, nav, main, footer, img, h1, h2, h3, p, ul, li, a, iframe {
+body, header, nav, main, footer, img, h1, h2, h3, p, ul, li, a, iframe,
+article, section, aside, figure, figcaption {
   margin: 0;
   padding: 0;
   border: 0;
@@ -33,12 +34,37 @@ header {
   background-color: #111827;
 }
 
+/* NEW: figure + figcaption header styling */
+.profile {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.profile-img {
+  width: 160px;
+  max-width: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+  /* Shadow requirement (box-shadow) */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 1.05em;
+}
+
+/* Optional: text shadow (counts too, but you already have box-shadow above) */
 header h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2.2em;
   margin-top: 1%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
 }
 
+/* If you keep h2 elsewhere on other pages, this stays useful */
 header h2 {
   font-size: 1.1em;
   font-weight: normal;
@@ -57,8 +83,8 @@ nav ul {
 
 nav li {
   display: inline-block;
-Margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav li a {
@@ -101,6 +127,27 @@ main ul {
   margin-left: 1.5em;
 }
 
+/* NEW: CSS Grid layout helpers (use on new page, and optionally others) */
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Optional: a reusable card style for articles/sections */
+.card {
+  background-color: #111827;
+  padding: 1.25em;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
 /* Style rules for class and id selectors */
 .link {
   color: #93c5fd;
@@ -136,4 +183,3 @@ footer a {
   color: #f8fafc;
   text-decoration: none;
 }
-
