@@ -2,11 +2,11 @@
 <!--
 Student Name: Landon Duplechin
 File Name: contact.html
-Date: 02/13/2026
+Date: 02/24/2026
 -->
 <html lang="en">
 <head>
-  <title>Contact</title>
+  <title>Landon Duplechin: Contact</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -21,19 +21,17 @@ Date: 02/13/2026
   <h1>Landon Duplechin</h1>
 </header>
 
-
 <nav>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="projects.html">Projects</a></li>
-
   </ul>
 </nav>
 
 <main>
-  <div id="contact">
+  <section id="contact" class="card">
     <h2>Contact Me</h2>
 
     <p>
@@ -43,20 +41,63 @@ Date: 02/13/2026
       </a>
     </p>
 
-    <p>Point University Location:</p>
+    <!-- Portfolio Part 6: Form (5+ form elements + submit) -->
+    <form class="contact-form" action="#" method="post">
+      <fieldset>
+        <legend>Send a Message</legend>
+
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic" required>
+          <option value="">Select one</option>
+          <option value="projects">Projects</option>
+          <option value="work">Work Opportunities</option>
+          <option value="general">General Question</option>
+        </select>
+
+        <p class="form-hint">Preferred contact method:</p>
+        <div class="radio-row">
+          <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+          <label for="contactEmail">Email</label>
+
+          <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+          <label for="contactPhone">Phone</label>
+        </div>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <div class="check-row">
+          <input type="checkbox" id="updates" name="updates" value="yes">
+          <label for="updates">Send me occasional updates</label>
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+      </fieldset>
+    </form>
+
+    <h3>Point University Location</h3>
 
     <iframe
       class="map"
       src="https://www.google.com/maps?q=Point+University,+West+Point,+GA&output=embed"
       title="Map showing Point University in West Point, Georgia"
-      allowfullscreen
       loading="lazy">
     </iframe>
-  </div>
+  </section>
 </main>
 
 <footer>
-  <p><a href="mailto:lduplechin0108239@students.point.edu">lduplechin0108239@students.point.edu</a></p>
+  <p>
+    <a href="mailto:lduplechin0108239@students.point.edu">
+      lduplechin0108239@students.point.edu
+    </a>
+  </p>
 </footer>
 
 </body>
