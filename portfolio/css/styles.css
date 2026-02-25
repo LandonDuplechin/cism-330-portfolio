@@ -1,10 +1,12 @@
 /*
 Name: Landon Duplechin
-Date: 02/20/2026
+Date: 02/24/2026
 File Name: styles.css
 */
 
-/* CSS Reset: removes default spacing and borders so styling is consistent across browsers */
+/* ========================================
+   CSS Reset
+======================================== */
 body, header, nav, main, footer, img, h1, h2, h3, p, ul, li, a, iframe,
 article, section, aside, figure, figcaption {
   margin: 0;
@@ -12,7 +14,9 @@ article, section, aside, figure, figcaption {
   border: 0;
 }
 
-/* Style rules for body */
+/* ========================================
+   Body
+======================================== */
 body {
   background-color: #0f172a;
   color: #f8fafc;
@@ -20,21 +24,24 @@ body {
   line-height: 1.6;
 }
 
-/* Style rules for responsive images */
+/* ========================================
+   Images
+======================================== */
 img {
   max-width: 100%;
   display: block;
   height: auto;
 }
 
-/* Style rules for header */
+/* ========================================
+   Header
+======================================== */
 header {
   padding: 2%;
   text-align: center;
   background-color: #111827;
 }
 
-/* NEW: figure + figcaption header styling */
 .profile {
   display: inline-block;
   text-align: center;
@@ -46,7 +53,6 @@ header {
   max-width: 100%;
   border-radius: 50%;
   margin: 0 auto;
-  /* Shadow requirement (box-shadow) */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
@@ -56,7 +62,6 @@ header {
   font-size: 1.05em;
 }
 
-/* Optional: text shadow (counts too, but you already have box-shadow above) */
 header h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2.2em;
@@ -64,14 +69,9 @@ header h1 {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
 }
 
-/* If you keep h2 elsewhere on other pages, this stays useful */
-header h2 {
-  font-size: 1.1em;
-  font-weight: normal;
-  margin-top: 0.5%;
-}
-
-/* Style rules for navigation */
+/* ========================================
+   Navigation
+======================================== */
 nav {
   background-color: #1d4ed8;
 }
@@ -83,8 +83,6 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin: 0;
-  padding: 0;
 }
 
 nav li a {
@@ -99,10 +97,12 @@ nav li a:hover {
   background-color: #0b3aa6;
 }
 
-/* Style rules for main content */
+/* ========================================
+   Main Content
+======================================== */
 main {
   padding: 2%;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -127,7 +127,9 @@ main ul {
   margin-left: 1.5em;
 }
 
-/* NEW: CSS Grid layout helpers (use on new page, and optionally others) */
+/* ========================================
+   Grid Layout
+======================================== */
 .grid {
   display: grid;
   gap: 1.25rem;
@@ -140,7 +142,9 @@ main ul {
   }
 }
 
-/* Optional: a reusable card style for articles/sections */
+/* ========================================
+   Card Styling
+======================================== */
 .card {
   background-color: #111827;
   padding: 1.25em;
@@ -148,7 +152,9 @@ main ul {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
-/* Style rules for class and id selectors */
+/* ========================================
+   Links
+======================================== */
 .link {
   color: #93c5fd;
   text-decoration: none;
@@ -156,21 +162,9 @@ main ul {
   font-style: italic;
 }
 
-#about, #contact {
-  background-color: #111827;
-  padding: 1.25em;
-  border-radius: 8px;
-}
-
-/* Style rules for embedded content */
-.map {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  margin-top: 0.5em;
-}
-
-/* Style rules for footer */
+/* ========================================
+   Footer
+======================================== */
 footer {
   text-align: center;
   padding: 1% 0;
@@ -182,4 +176,146 @@ footer {
 footer a {
   color: #f8fafc;
   text-decoration: none;
+}
+
+/* ========================================
+   ========================================
+   Portfolio Part 6 Updates
+   ========================================
+======================================== */
+
+/* ---------- Responsive Table ---------- */
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  display: none; /* Hide on mobile */
+}
+
+.skills-table caption {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  text-align: left;
+}
+
+.skills-table th,
+.skills-table td {
+  border: 1px solid #7188bb;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.skills-table th {
+  background-color: #0b3aa6;
+}
+
+/* Mobile alternative list */
+.skills-list {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+
+.skills-list li {
+  margin-bottom: 0.6rem;
+}
+
+/* Tablet and Desktop */
+@media (min-width: 768px) {
+  .skills-table {
+    display: table;
+  }
+
+  .skills-list {
+    display: none;
+  }
+}
+
+/* ---------- Form Styling ---------- */
+
+.contact-form {
+  margin-top: 1rem;
+}
+
+.contact-form fieldset {
+  border: 1px solid #7188bb;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #111827;
+}
+
+.contact-form legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid #7188bb;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.radio-row,
+.check-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.radio-row input,
+.check-row input {
+  width: auto;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 10px;
+  background-color: #1d4ed8;
+  color: #f8fafc;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0b3aa6;
+}
+
+/* Tablet refinement */
+@media (min-width: 768px) {
+  .contact-form {
+    max-width: 720px;
+  }
+}
+
+/* Desktop refinement */
+@media (min-width: 1024px) {
+  .skills-table th,
+  .skills-table td {
+    padding: 0.9rem;
+  }
+
+  .contact-form fieldset {
+    padding: 1.25rem;
+  }
 }
