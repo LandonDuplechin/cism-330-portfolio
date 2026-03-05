@@ -1,6 +1,6 @@
 /*
 Name: Landon Duplechin
-Date: 02/24/2026
+Date: 03/04/2026
 File Name: styles.css
 */
 
@@ -162,6 +162,16 @@ main ul {
   font-style: italic;
 }
 
+/* Keyboard accessibility (WAVE-friendly) */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
 /* ========================================
    Footer
 ======================================== */
@@ -176,6 +186,44 @@ footer {
 footer a {
   color: #f8fafc;
   text-decoration: none;
+}
+
+/* ========================================
+   Part 7: Social Media Icons
+======================================== */
+.social {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .social img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .social img {
+    width: 56px;
+    height: 56px;
+  }
 }
 
 /* ========================================
